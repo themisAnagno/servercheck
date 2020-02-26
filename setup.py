@@ -14,14 +14,14 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = "servercheck"
 DESCRIPTION = "Application for checking servers health"
-URL = "https://github.com/me/myproject"
+URL = "https://github.com/themisAnagno/servercheck.git"
 EMAIL = "thmanagnostopoulos@gmail.com"
 AUTHOR = "Themis Anagnostopoulos"
 REQUIRES_PYTHON = ">=3.7.0"
 VERSION = "0.1.0"
 
 # What packages are required for this module to be executed?
-REQUIRED = ["click"]
+REQUIRED = ["click", "requests"]
 
 # What packages are optional?
 EXTRAS = {}

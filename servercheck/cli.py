@@ -6,6 +6,7 @@ This module creates the cli function that takes the input for the checkserver ap
 import sys
 import json
 import click
+from .http import make_req
 
 @click.command()
 @click.option("--server", "-s", default=None, help="A server/port combination", multiple=True)
@@ -36,7 +37,17 @@ def cli(server=None, filename=None):
         for s in server:
             servers.add(s)
 
-    print(servers)
+    results = make_req(servers)
+
+    # Print the results
+    print("Successful Connections")
+    print("----------------------")
+    for iserver in results["success"]:
+        print(iserver)
+    print("\nFailed Connections")
+    print("------------------")
+    for iserver in results["failure"]:
+        print(iserver)
 
 if __name__ == "__main__":
     cli()

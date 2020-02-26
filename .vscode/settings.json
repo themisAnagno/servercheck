@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/home/themis/.local/share/virtualenvs/servercheck-4penaE17/bin/python"
+    "python.pythonPath": "/home/themis/.local/share/virtualenvs/servercheck-4penaE17/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
 }
